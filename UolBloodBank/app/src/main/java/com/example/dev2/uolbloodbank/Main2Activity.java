@@ -25,11 +25,11 @@ public class Main2Activity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.activity_main2, signUpFragment);
             fragmentTransaction.commit();
         }
-        else if(msg.equals("admin")){
-            signUpFragment = new SignUpFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.activity_main2, signUpFragment);
-            fragmentTransaction.commit();
-        }
+//        else if(msg.equals("admin")){
+//            signUpFragment = new SignUpFragment();
+//            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//            fragmentTransaction.replace(R.id.activity_main2, signUpFragment);
+//            fragmentTransaction.commit();
+//        }
     }
 }
