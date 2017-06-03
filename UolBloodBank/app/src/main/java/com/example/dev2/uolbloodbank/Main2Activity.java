@@ -7,6 +7,7 @@ import android.os.Bundle;
 public class Main2Activity extends AppCompatActivity {
     SignUpFragment signUpFragment;
     LoginFragment loginFragment;
+    AdminLoginFragment adminLoginFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +26,11 @@ public class Main2Activity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.activity_main2, signUpFragment);
             fragmentTransaction.commit();
         }
-//        else if(msg.equals("admin")){
-//            signUpFragment = new SignUpFragment();
-//            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//            fragmentTransaction.replace(R.id.activity_main2, signUpFragment);
-//            fragmentTransaction.commit();
-//        }
+        else if(msg.equals("admin")){
+            adminLoginFragment = new AdminLoginFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.activity_main2, adminLoginFragment);
+            fragmentTransaction.commit();
+        }
     }
 }
