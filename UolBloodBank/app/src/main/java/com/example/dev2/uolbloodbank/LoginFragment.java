@@ -74,7 +74,7 @@ public class LoginFragment extends Fragment {
         @Override
         protected Boolean doInBackground(String... params) {
             OkHttpClient okHttpClient = new OkHttpClient();
-            Request request = new Request.Builder().url("http://192.168.10.16:8080/uolbloodbank/public/donor").build();
+            Request request = new Request.Builder().url("http://192.168.10.9:8080/uolbloodbank/public/donor").build();
             try {
                 Thread.sleep(1000);
                 Response response = okHttpClient.newCall(request).execute();

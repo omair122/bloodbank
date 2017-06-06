@@ -43,15 +43,15 @@ public class UpdateUser extends AppCompatActivity {
         String jsonString = intent.getStringExtra("jsonString");
         Gson gson = new Gson();
         user = gson.fromJson(jsonString, User.class);
-        name = (EditText) findViewById(R.id.sxname);
-        email = (EditText) findViewById(R.id.sxemail);
+        name = (EditText) findViewById(R.id.rrname);
+        email = (EditText) findViewById(R.id.rremail);
         oldxpass = (EditText) findViewById(R.id.oldpass);
-        password = (EditText) findViewById(R.id.sxpass);
-        password2 = (EditText) findViewById(R.id.sxpass2);
-        BloodGroup = (EditText) findViewById(R.id.sxgroup);
+        password = (EditText) findViewById(R.id.rrpass);
+        password2 = (EditText) findViewById(R.id.rrpass2);
+        BloodGroup = (EditText) findViewById(R.id.rrgroup);
         Phone = (EditText) findViewById(R.id.sxphone);
 
-        update = (Button) findViewById(R.id.update);
+        update = (Button) findViewById(R.id.submit);
         name.setText(user.getName());
         email.setText(user.getEmail());
         BloodGroup.setText(user.getBloodGroup());
@@ -79,7 +79,7 @@ public class UpdateUser extends AppCompatActivity {
 
 
             OkHttpClient client = new OkHttpClient();
-            Request request = new Request.Builder().url("http://192.168.10.16:8080/uolbloodbank/public/donor").build();
+            Request request = new Request.Builder().url("http://192.168.10.9:8080/uolbloodbank/public/donor").build();
             try {
                 Thread.sleep(100);
                 Response response = client.newCall(request).execute();
@@ -101,7 +101,7 @@ public class UpdateUser extends AppCompatActivity {
                                 .add("Phone", params[4])
                                 .build();
                         Request req1 = new Request.Builder()
-                                .url("http://192.168.10.16:8080/uolbloodbank/public/donor/"+chek)
+                                .url("http://192.168.10.9:8080/uolbloodbank/public/donor/"+chek)
                                 .put(fx).build();
                         try {
                             Thread.sleep(100);
@@ -133,7 +133,17 @@ public class UpdateUser extends AppCompatActivity {
             if (result == false) {
                 Toast.makeText(getApplicationContext(), "Record not updated due to unknown reason", Toast.LENGTH_LONG).show();
             } else if (result == true) {
+                name.setText(null);
+                email.setText(null);
+                oldxpass.setText(null);
+                password.setText(null);
+                password2.setText(null);
+                BloodGroup.setText(null);
+                Phone.setText(null);
+
                 Toast.makeText(getApplicationContext(), "Record updated successfully", Toast.LENGTH_LONG).show();
+                Intent intent1= new Intent(UpdateUser.this,CompleteListActivity.class);
+                startActivity(intent1);
             }
         }
     }

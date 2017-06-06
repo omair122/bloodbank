@@ -20,7 +20,9 @@
         <activity android:name=".Main2Activity" />
         <activity android:name=".AfterLoginActivity" />
         <activity android:name=".UpdateUser" />
-        <activity android:name=".CompleteListActivity"></activity>
+        <activity android:name=".CompleteListActivity" />
+        <activity android:name=".Main3Activity" />
+        <activity android:name=".ActivityForRecycler"></activity>
     </application>
 
 </manifest>

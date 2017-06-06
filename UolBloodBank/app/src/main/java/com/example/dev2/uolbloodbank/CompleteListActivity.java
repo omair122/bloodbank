@@ -65,7 +65,7 @@ public class CompleteListActivity extends AppCompatActivity {
         protected Boolean doInBackground(String... params) {
             ArrayList<User> arrayx = new ArrayList<User>();
             OkHttpClient okHttpClient = new OkHttpClient();
-            Request request = new Request.Builder().url("http://192.168.10.16:8080/uolbloodbank/public/donor").build();
+            Request request = new Request.Builder().url("http://192.168.10.9:8080/uolbloodbank/public/donor").build();
             try {
                 Thread.sleep(1000);
                 Response response = okHttpClient.newCall(request).execute();

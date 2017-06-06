@@ -2,6 +2,7 @@ package com.example.dev2.uolbloodbank;
 
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -46,14 +47,14 @@ public class SignUpFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_sign_up, container, false);
-        name = (EditText) view.findViewById(R.id.sxname);
-        email = (EditText) view.findViewById(R.id.sxemail);
-        password = (EditText) view.findViewById(R.id.sxpass);
-        password2 = (EditText) view.findViewById(R.id.sxpass2);
-        BloodGroup = (EditText) view.findViewById(R.id.sxgroup);
+        name = (EditText) view.findViewById(R.id.rrname);
+        email = (EditText) view.findViewById(R.id.rremail);
+        password = (EditText) view.findViewById(R.id.rrpass);
+        password2 = (EditText) view.findViewById(R.id.rrpass2);
+        BloodGroup = (EditText) view.findViewById(R.id.rrgroup);
         Phone = (EditText) view.findViewById(R.id.sphone);
 
-        signup = (Button) view.findViewById(R.id.update);
+        signup = (Button) view.findViewById(R.id.submit);
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +97,7 @@ public class SignUpFragment extends Fragment {
                     .add("BloodGroup",params[3])
                     .add("Phone",params[4])
                     .build();
-            Request request = new Request.Builder().url("http://192.168.10.16:8080/uolbloodbank/public/donor").post(formbody).build();
+            Request request = new Request.Builder().url("http://192.168.10.9:8080/uolbloodbank/public/donor").post(formbody).build();
 
             try {
                 Thread.sleep(1000);
@@ -128,7 +129,16 @@ public class SignUpFragment extends Fragment {
             }
             else if(result==true)
             {
+                name.setText(null);
+                email.setText(null);
+                password.setText(null);
+                password2.setText(null);
+                BloodGroup.setText(null);
+                Phone.setText(null);
                 Toast.makeText(getContext(),"Data sent Successfully",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getContext(),MainActivity.class);
+                startActivity(intent);
+
 
 
             }

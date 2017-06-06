@@ -6,7 +6,7 @@ package com.example.dev2.uolbloodbank;
 
 public class User {
     int id;
-    String Name;
+    String name;
     String email;
     String pass;
     String BloodGroup;
@@ -15,7 +15,7 @@ public class User {
 
     public User(int id, String name, String email, String pass, String bloodGroup, String Phone) {
         this.id = id;
-        this.Name = name;
+        this.name = name;
         this.email = email;
         this.pass = pass;
         this.BloodGroup = bloodGroup;
@@ -24,11 +24,15 @@ public class User {
     }
 
     public User(String s, String s1, String s2, String s3, String s4) {
-        this.Name = s;
+        this.name = s;
         this.email = s1;
         this.pass = s2;
         this.BloodGroup = s3;
         this.Phone = s4;
+    }
+
+    public User() {
+        //
     }
 
     public String getPhone() {
@@ -40,11 +44,11 @@ public class User {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public int getId() {

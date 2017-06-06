@@ -77,7 +77,7 @@ public class AdminLoginFragment extends Fragment {
         @Override
         protected Boolean doInBackground(String... params) {
             OkHttpClient okHttpClient = new OkHttpClient();
-            Request request = new Request.Builder().url("http://192.168.10.16:8080/uolbloodbank/public/admin").build();
+            Request request = new Request.Builder().url("http://192.168.10.9:8080/uolbloodbank/public/admin").build();
             try {
                 Thread.sleep(1000);
                 Response response = okHttpClient.newCall(request).execute();
@@ -116,7 +116,7 @@ public class AdminLoginFragment extends Fragment {
                 Toast.makeText(getContext(), "wrong username or password", Toast.LENGTH_LONG).show();
             } else if (result == true) {
 
-                Intent i = new Intent(getContext(), AfterLoginActivity.class);
+                Intent i = new Intent(getContext(), CompleteListActivity.class);
                 Gson gson = new Gson();
                 String jsonString = gson.toJson(userx);
                 i.putExtra("jsonString", jsonString);

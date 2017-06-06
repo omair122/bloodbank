@@ -14,7 +14,7 @@
         android:text="Update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/update"
+        android:id="@+id/submit"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
@@ -25,7 +25,7 @@
         android:ems="10"
         android:id="@+id/oldpass"
         android:hint="Enter Old Password"
-        android:layout_below="@+id/sxemail"
+        android:layout_below="@+id/rremail"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="17dp" />
 
@@ -42,8 +42,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView5"
-        android:layout_alignBaseline="@+id/sxpass"
-        android:layout_alignBottom="@+id/sxpass"
+        android:layout_alignBaseline="@+id/rrpass"
+        android:layout_alignBottom="@+id/rrpass"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -51,9 +51,9 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/sxpass2"
+        android:id="@+id/rrpass2"
         android:hint="Confirm Password"
-        android:layout_below="@+id/sxpass"
+        android:layout_below="@+id/rrpass"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="14dp" />
 
@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/sxname"
+        android:id="@+id/rrname"
         android:hint="Enter Name"
         android:layout_alignBaseline="@+id/textView3"
         android:layout_alignBottom="@+id/textView3"
@@ -82,8 +82,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
-        android:layout_alignBaseline="@+id/sxemail"
-        android:layout_alignBottom="@+id/sxemail"
+        android:layout_alignBaseline="@+id/rremail"
+        android:layout_alignBottom="@+id/rremail"
         android:layout_alignEnd="@+id/textView3" />
 
     <EditText
@@ -91,9 +91,9 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/sxemail"
+        android:id="@+id/rremail"
         android:hint="Enter Email"
-        android:layout_below="@+id/sxname"
+        android:layout_below="@+id/rrname"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="12dp" />
 
@@ -102,7 +102,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/sxpass"
+        android:id="@+id/rrpass"
         android:hint="Enter Password"
         android:layout_below="@+id/oldpass"
         android:layout_alignParentEnd="true"
@@ -113,8 +113,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView6"
-        android:layout_alignBaseline="@+id/sxpass2"
-        android:layout_alignBottom="@+id/sxpass2"
+        android:layout_alignBaseline="@+id/rrpass2"
+        android:layout_alignBottom="@+id/rrpass2"
         android:layout_alignStart="@+id/textView4" />
 
     <TextView
@@ -123,7 +123,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView12"
         android:layout_marginBottom="17dp"
-        android:layout_above="@+id/update"
+        android:layout_above="@+id/submit"
         android:layout_alignStart="@+id/textView6" />
 
     <TextView
@@ -140,7 +140,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/sxgroup"
+        android:id="@+id/rrgroup"
         android:hint="Enter Blood Group"
         android:layout_alignBaseline="@+id/textView7"
         android:layout_alignBottom="@+id/textView7"
@@ -152,7 +152,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/sxphone"
-        android:layout_above="@+id/update"
+        android:layout_above="@+id/submit"
         android:layout_alignParentEnd="true"
         android:hint="Enter Phone" />
 </RelativeLayout>

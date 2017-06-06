@@ -10,9 +10,9 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/sxemail"
-        android:layout_below="@+id/sxname"
-        android:layout_alignStart="@+id/sxname"
+        android:id="@+id/rremail"
+        android:layout_below="@+id/rrname"
+        android:layout_alignStart="@+id/rrname"
         android:layout_marginTop="19dp"
         android:hint="Enter Email" />
 
@@ -21,10 +21,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:layout_below="@+id/sxemail"
-        android:layout_alignEnd="@+id/sxemail"
+        android:layout_below="@+id/rremail"
+        android:layout_alignEnd="@+id/rremail"
         android:layout_marginTop="21dp"
-        android:id="@+id/sxpass"
+        android:id="@+id/rrpass"
         android:hint="Enter Password" />
 
     <EditText
@@ -32,10 +32,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:layout_below="@+id/sxpass"
-        android:layout_alignStart="@+id/sxpass"
+        android:layout_below="@+id/rrpass"
+        android:layout_alignStart="@+id/rrpass"
         android:layout_marginTop="30dp"
-        android:id="@+id/sxpass2"
+        android:id="@+id/rrpass2"
         android:hint="Confirm Password" />
 
     <EditText
@@ -43,10 +43,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_below="@+id/sxpass2"
-        android:layout_alignStart="@+id/sxpass2"
+        android:layout_below="@+id/rrpass2"
+        android:layout_alignStart="@+id/rrpass2"
         android:layout_marginTop="22dp"
-        android:id="@+id/sxgroup"
+        android:id="@+id/rrgroup"
         android:hint="Enter Blood Group" />
 
     <EditText
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/sxname"
+        android:id="@+id/rrname"
         android:layout_marginEnd="13dp"
         android:layout_marginTop="46dp"
         android:layout_alignParentTop="true"
@@ -65,7 +65,7 @@
         android:text="Name:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/sxemail"
+        android:layout_above="@+id/rremail"
         android:layout_alignParentStart="true"
         android:layout_marginStart="13dp"
         android:id="@+id/textView3" />
@@ -74,7 +74,7 @@
         android:text="Password:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/sxpass2"
+        android:layout_above="@+id/rrpass2"
         android:layout_alignStart="@+id/textView4"
         android:id="@+id/textView5" />
 
@@ -82,7 +82,7 @@
         android:text="Confirm Password:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/sxgroup"
+        android:layout_above="@+id/rrgroup"
         android:layout_alignStart="@+id/textView5"
         android:id="@+id/textView6" />
 
@@ -90,7 +90,7 @@
         android:text="Blood Group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/sxgroup"
+        android:layout_alignBottom="@+id/rrgroup"
         android:layout_alignStart="@+id/textView6"
         android:id="@+id/textView7" />
 
@@ -99,16 +99,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
-        android:layout_above="@+id/sxpass"
+        android:layout_above="@+id/rrpass"
         android:layout_alignStart="@+id/textView3" />
 
     <Button
         android:text="Sign Up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/update"
+        android:id="@+id/submit"
         android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/sxgroup"
+        android:layout_alignEnd="@+id/rrgroup"
         android:layout_marginBottom="16dp" />
 
     <TextView
@@ -126,7 +126,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:layout_alignBottom="@+id/text"
-        android:layout_alignEnd="@+id/sxgroup"
+        android:layout_alignEnd="@+id/rrgroup"
         android:id="@+id/sphone"
         android:hint="Enter Phone Number" />
 

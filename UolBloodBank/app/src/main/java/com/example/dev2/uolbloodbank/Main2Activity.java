@@ -32,5 +32,7 @@ public class Main2Activity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.activity_main2, adminLoginFragment);
             fragmentTransaction.commit();
         }
+
+
     }
 }
